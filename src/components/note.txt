@@ -1,0 +1,55 @@
+REDUX
+-----
+coupling - parent child relations.here child are dependend on parent.so an issue to a child cause error in entire project.
+
+-props drilling
+  if any intermediate component have errors then all other childs will not work
+
+-To avoid props drilling we need to reduce coupling and make all components indipendent.
+
+-For this react introduce the technology -state management technology called REDUX
+ 
+ redux process
+ -------------
+ *create a new js file to keep the states,all the component can acess the js file
+
+ *The components only can access the datas from js file,but cant update the datas in js file
+
+ *Action - a file contain all logic to update state
+
+ *Dispatch - method used to dispatch the logic in action file when the component need updation
+
+ *Reducer - update datas in js file acording to payload response get from action file
+
+ LIBRARIES FOR APPLY REDUX
+ -------------------------
+ REDUX
+ REACT-REDUX
+ REdux-THUNK
+  eg- npm i redux react-redux redux-thunk
+
+  createStore()- method used to create store in js file
+                2 arguments used. 
+                   1)Reducer
+                   2)middleware - redux is syncronous. so to make it as asyncrons we use middleware
+applyMiddleware() - method in redux to apply middleware          
+combineReducers() - method in redux to combine all reducers in js file   
+thunk  in REDUX-THUNK -used to create middleware      
+
+1.create store
+2.apply store in index.js by provider tag
+
+AXIOS
+------
+Module used to make http methods(api calls)
+  - npm i axios
+
+
+UseDispatch - hook 
+-----------------
+used to dispatch actions in components - from react-redux  
+
+To acess data from store to different components we need hook
+  -called useSelector
+
+
